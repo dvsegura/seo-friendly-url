@@ -1,3 +1,8 @@
+<?php
+$request = $_SERVER['REQUEST_URI'];
+$arr_request = explode("/",$request);
+//procesar la url
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

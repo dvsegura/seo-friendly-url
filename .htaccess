@@ -8,5 +8,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^escape-room/([0-9]+)$ escape.php?id=$1&%{QUERY_STRING} [L] 
 RewriteRule ^escape-online/([0-9]+)$ escape.php?id=$1&%{QUERY_STRING}[L]
-
+#forma 2 URL no real gestiona htaccess
 RewriteRule ^([^/]+)/([^/]+)/([^/]+)/?$ selector.php?lang=$1&page=$2&element=$3&%{QUERY_STRING} [L]
+
+#forma3 URL no real. Gestina php y htaccess solo redirecciona
+RewriteRule . /index.php?%{QUERY_STRING} [L,NC]  # . => todo lo que haya , NC => 

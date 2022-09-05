@@ -13,7 +13,7 @@ RewriteRule ^([^/]+)/([^/]+)?$ selector.php?lang=$1page=$2&% {QUERY_STRING} [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d 
-RewriteRule ^([^/]+)/([^/]+)\/([^/]+)/?$ selector.php?lang=$1page=$2&element=$3&% {QUERY_STRING} [L]
+RewriteRule ^([^/]+)/([^/]+)\/([^/]+)/?$ selector.php?lang=$1&page=$2&element=$3&%{QUERY_STRING} [L]
 
 simbolo ? (exista o no exista)
 
