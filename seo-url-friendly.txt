@@ -1,0 +1,16 @@
+Usando .htaccess
+Fuente: https://www.youtube.com/watch?v=KwRs95bXicg 
+1. URL semi-real
+2. URL no real
+3. 
+
+RewriteRule tiene dos partes: lo que se recibe y lo q se envia
+
+1.URL semi-real
+Ej. example1.programem.es/es/34/index.php
+
+2.URL no real
+htaccess gestionara todo 
+Recomienda enviar todas las url al mismo fichero php ej. selector.php 
+
+3. Enviar todo a php y que sea php quien se encargue de procesarlo como lo hace wordpress

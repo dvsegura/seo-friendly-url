@@ -1,0 +1,13 @@
+Options + FollowSymLinks
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^([a-z]+)/([1-9]+)/(.*)$ /$3?lang=$1&user=$2&%{QUERY_STRING} [L,NC]   
+  
+// Ej. example1.programem.es/es/34/index.php
+// (.*) todo lo que quede hasta al final de la url
+//QUERY_STRING 
+
+//Ej. example1.programem.es/es/34/index.php equivale a: ^([a-z]+)/([1-9]+)/(.*)$ 
+//Ej. example1.programem.es/index.php?lang=es&user=34(url real) equivale a : $3?lang=$1&user=$2&%{QUERY_STRING} [L,NC]

@@ -1,0 +1,12 @@
+Options +FollowSymLinks  
+RewriteEngine On
+
+ErrorDocument 404 /404.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^escape-room/([0-9]+)$ escape.php?id=$1&%{QUERY_STRING} [L] 
+RewriteRule ^escape-online/([0-9]+)$ escape.php?id=$1&%{QUERY_STRING}[L]
+
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/?$ selector.php?lang=$1&page=$2&element=$3&%{QUERY_STRING} [L]

@@ -1,0 +1,20 @@
+Options + FollowSymLinks
+RewriteEngene On
+
+RewriteRule ^/?$ selector.php?page=index [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^([^/]+)/?$ selector.php?lang=$1page=default&%{QUERY_STRING} [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^([^/]+)/([^/]+)?$ selector.php?lang=$1page=$2&% {QUERY_STRING} [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^([^/]+)/([^/]+)\/([^/]+)/?$ selector.php?lang=$1page=$2&element=$3&% {QUERY_STRING} [L]
+
+simbolo ? (exista o no exista)
+
+[^/] variable hasta la primera barra (es). Ejemplo: dominio.com/es/servicios 
